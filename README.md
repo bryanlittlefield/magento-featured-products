@@ -52,10 +52,10 @@ Display Featured Products on Page Template
 </div>
 ```
 
-####Step 3:Set Block to Desired Location Through XML:
+####Step 3: Set Block to Desired Location Through XML:
 --------------------------------------------
 
-Example:
+#####Example 1 (Will Set Block into the Content Structural Block):
 
 ```xml
 <cms_index_index>
@@ -64,4 +64,19 @@ Example:
     </reference>
 </cms_index_index>
 ```
+#####Example 2 (Will allow you to call block by getChildHtml method):
+
+First set block in local.xml in your desried location
+```xml
+<cms_page>
+    <reference name="root">
+      <block type="core/template" name="home-featured"  as="home_featured" template="custom/featured_products.phtml"/>
+    </reference>
+</cms_page>
+```
+Then Display it using the following:
+```php
+<?php echo $this->getChildHtml('home_featured') ?>
+```
+
 
