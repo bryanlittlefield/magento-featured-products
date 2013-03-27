@@ -7,7 +7,6 @@ Display Featured Products on Page Template
 --------------------------------------------
 1. Go to Catalog->Attributes->Manage Attributes
 2. Add New Attribute with the Attribute Code "featured" and Catalog Input Type of "Yes/No"
-3. 
 
 
 ####Step 2: Create Template File
